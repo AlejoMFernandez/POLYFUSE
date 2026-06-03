@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(git --version)",
+      "Bash(npx --yes skills add Leonxlnx/taste-skill)",
+      "Bash(npx --yes impeccable skills install)",
+      "Bash(npx --yes skills add kylezantos/design-motion-principles)",
+      "Bash(node .agents/skills/impeccable/scripts/palette.mjs)",
+      "Bash(node .agents/skills/impeccable/scripts/context.mjs)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "PowerShell(Get-NetTCPConnection -LocalPort 5175 -State Listen -ErrorAction SilentlyContinue | ForEach-Object { Stop-Process -Id $_.OwningProcess -Force -ErrorAction SilentlyContinue }; \"done\")",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(npx tsc *)",
+      "Bash(npx vite *)",
+      "Bash(ls -la \"C:/xampp/htdocs/AlejoMFernandez-portfolio\" 2>&1 | head -40)"
+    ]
+  }
+}

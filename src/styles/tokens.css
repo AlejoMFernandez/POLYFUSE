@@ -1,0 +1,117 @@
+/* ============================================================
+   POLYFUSE · Design tokens
+   Aesthetic: geometric-elegant. Deep indigo "focus field" surface,
+   monochrome indigo->violet tile ramp + a single warm gold accent
+   reserved for reward moments. OKLCH throughout.
+   ============================================================ */
+
+:root {
+  /* ---- Surface (deep indigo near-black, faint brand tint) ---- */
+  --bg:        oklch(0.115 0.022 274);
+  --surface:   oklch(0.158 0.026 274);
+  --surface-2: oklch(0.198 0.028 274);
+  --cell:      oklch(0.205 0.028 274);
+  --line:      oklch(0.30 0.030 274);
+  --line-soft: oklch(0.255 0.028 274);
+
+  /* ---- Ink (cool near-white ramp) ---- */
+  --ink:       oklch(0.972 0.006 274);
+  --ink-soft:  oklch(0.800 0.013 274);
+  --ink-mute:  oklch(0.640 0.016 274);
+  --ink-faint: oklch(0.500 0.018 274);
+
+  /* ---- Brand + accent ---- */
+  --primary:        oklch(0.640 0.200 274);
+  --primary-bright: oklch(0.720 0.190 276);
+  --primary-ink:    oklch(0.985 0.005 274); /* text on primary */
+  --accent:         oklch(0.840 0.140 86);  /* the one warm gold, rare */
+  --accent-bright:  oklch(0.900 0.130 90);
+
+  /* ---- Semantic ---- */
+  --danger: oklch(0.640 0.190 25);
+  --focus:  oklch(0.780 0.150 270);
+
+  /* ---- Tile ramp: 11 tiers, triangle(3) -> circle(inf) ----
+     Cool indigo -> violet -> magenta, capped by the warm gold goal. */
+  --tier-0:  oklch(0.430 0.105 282); /* triangle  */
+  --tier-1:  oklch(0.485 0.135 280); /* square    */
+  --tier-2:  oklch(0.540 0.160 278); /* pentagon  */
+  --tier-3:  oklch(0.595 0.180 275); /* hexagon   */
+  --tier-4:  oklch(0.650 0.198 272); /* heptagon  */
+  --tier-5:  oklch(0.705 0.205 285); /* octagon   */
+  --tier-6:  oklch(0.755 0.200 300); /* nonagon   */
+  --tier-7:  oklch(0.795 0.190 318); /* decagon   */
+  --tier-8:  oklch(0.825 0.175 335); /* 11-gon    */
+  --tier-9:  oklch(0.855 0.155 350); /* 12-gon    */
+  --tier-10: oklch(0.860 0.140 86);  /* circle (goal, gold) */
+
+  /* ---- Typography ---- */
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-ui:      "Inter", system-ui, sans-serif;
+  --font-mono:    "Space Mono", ui-monospace, monospace;
+
+  /* fluid scale, display ceiling kept <= 6rem */
+  --fs-display: clamp(2.75rem, 9vw, 5rem);
+  --fs-h1:      clamp(1.6rem, 4.5vw, 2.4rem);
+  --fs-h2:      clamp(1.3rem, 3vw, 1.6rem);
+  --fs-h3:      1.15rem;
+  --fs-body:    1rem;
+  --fs-small:   0.875rem;
+  --fs-label:   0.74rem;
+  --fs-score:   clamp(1.5rem, 4vw, 2rem);
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.25;
+  --lh-body:  1.55;
+
+  --tracking-display: -0.02em;
+  --tracking-label: 0.12em;
+
+  /* ---- Spacing (varied rhythm) ---- */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+  --sp-9: 6rem;
+
+  /* ---- Radii (cards cap at 16px) ---- */
+  --r-sm:   8px;
+  --r-md:   12px;
+  --r-lg:   16px;
+  --r-tile: 15px;
+  --r-pill: 999px;
+
+  /* ---- Elevation (soft, single-source; no ghost-card pairing) ---- */
+  --shadow-sm:  0 1px 2px oklch(0 0 0 / 0.3);
+  --shadow-md:  0 8px 24px -8px oklch(0 0 0 / 0.5);
+  --shadow-lg:  0 24px 64px -16px oklch(0 0 0 / 0.6);
+  --glow-primary: 0 0 24px -2px oklch(0.64 0.20 274 / 0.45);
+  --glow-accent:  0 0 28px -2px oklch(0.84 0.14 86 / 0.5);
+
+  /* ---- Motion (exponential ease-out, no bounce/elastic) ---- */
+  --ease-out:      cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.30, 1);
+  --ease-in-out:   cubic-bezier(0.65, 0, 0.35, 1);
+  --dur-fast:  0.12s;  /* high-frequency tile moves */
+  --dur-base:  0.2s;
+  --dur-slow:  0.36s;  /* rare screen transitions   */
+
+  /* ---- Layout ---- */
+  --shell-max: 30rem;
+  --z-board: 1;
+  --z-hud: 5;
+  --z-overlay: 20;
+  --z-toast: 30;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0.001s;
+    --dur-base: 0.001s;
+    --dur-slow: 0.001s;
+  }
+}

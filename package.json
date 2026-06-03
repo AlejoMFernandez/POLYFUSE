@@ -1,0 +1,21 @@
+{
+  "name": "polyfuse",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "POLYFUSE — a geometric polygon-merge puzzle. Pure SVG, premium minimal.",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5",
+    "howler": "^2.2.4"
+  },
+  "devDependencies": {
+    "@types/howler": "^2.2.12",
+    "typescript": "^5.6.3",
+    "vite": "^6.0.7"
+  }
+}
