@@ -6,7 +6,7 @@
   "description": "POLYFUSE — a geometric polygon-merge puzzle. Pure SVG, premium minimal.",
   "scripts": {
     "dev": "vite",
-    "build": "tsc --noEmit && vite build",
+    "build": "npx tsc --noEmit && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
